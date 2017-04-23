@@ -9,4 +9,4 @@
 include "../model/MongoConector.php";
 
 $client = new MongoConector();
-$client->find();
+$client->find("test", array());
