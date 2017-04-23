@@ -18,6 +18,7 @@ $payload = $client->verifyIdToken($id_token);
 if ($payload) {
     $userid = $payload['sub'];
     var_dump($payload);
+    echo "<img src='".$payload["picture"]."' />";
     // If request specified a G Suite domain:
     //$domain = $payload['hd'];
 } else {
