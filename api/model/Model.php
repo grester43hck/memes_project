@@ -20,7 +20,7 @@ abstract class Model
         $object = (array)$object;
         foreach($object as $field=>$val){
             if($field=="_id"){
-                $this->id = array_values((array)$val);
+                $this->id = array_values((array)$val)[0];
             }else {
                 $this->$field = $val;
             }
