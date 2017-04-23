@@ -17,7 +17,7 @@ $client = new Google_Client(['client_id' => "440760096024-d7ai1dsjv219r8rb97e0iu
 $payload = $client->verifyIdToken($id_token);
 if ($payload) {
     $userid = $payload['sub'];
-    var_dump($userid);
+    var_dump($payload);
     // If request specified a G Suite domain:
     //$domain = $payload['hd'];
 } else {
