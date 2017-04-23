@@ -25,7 +25,7 @@ abstract class Model
                 $this->$field = $val;
             }
         }
-
+        return $this;
     }
 
     public abstract function getCollection();
