@@ -6,7 +6,8 @@
  * Time: 18:57
  */
 
-include "../model/MongoConector.php";
+include_once "../header.php";
+
 
 $client = new MongoConector();
 $res = $client->find(new testModel());
