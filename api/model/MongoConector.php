@@ -20,13 +20,16 @@ class MongoConector
 
     }
 
-    public function find($collection, $query=array(), $options=array()){
+    public function find($model, $query=array(), $options=array()){
 
         $query = new \MongoDB\Driver\Query($query, $options);
-        $rows   = $this->conexion->executeQuery('db.'.$collection, $query);
+        $rows   = $this->conexion->executeQuery('memes_project.'.$model->getCollection(), $query);
 
-        var_dump($rows);
-
+        $res = array();
+        foreach($rows as $r) {
+            $res = $model->paser($r);
+        }
+        return $res;
     }
 
 }
