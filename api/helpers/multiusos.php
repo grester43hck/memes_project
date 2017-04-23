@@ -11,3 +11,4 @@ include_once "../header.php";
 
 $client = new MongoConector();
 $res = $client->find(new testModel());
+var_dump($res);

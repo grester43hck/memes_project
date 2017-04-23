@@ -27,7 +27,7 @@ class MongoConector
 
         $res = array();
         foreach($rows as $r) {
-            $res = $model->paser($r);
+            $res = $model->parse($r);
         }
         return $res;
     }
