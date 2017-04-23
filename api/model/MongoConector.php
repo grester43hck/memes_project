@@ -25,6 +25,8 @@ class MongoConector
         $query = new \MongoDB\Driver\Query($query, $options);
         $rows   = $this->conexion->executeQuery('db.'.$collection, $query);
 
+        var_dump($rows);
+
     }
 
 }
