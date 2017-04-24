@@ -13,14 +13,15 @@ class Authenticate
 
     public function auth($token, $type){
         // Get $id_token via HTTPS POST.
-        $id_token = $_GET["token"];
-        $client = new Google_Client(['client_id' => $this->CLIENTID]);
-        $payload = $client->verifyIdToken($id_token);
-        if ($payload) {
-            $userid = $payload['sub'];
-            return array("user_id"=>$userid);
-        } else {
-            return false;
+        if($type=="google") {
+            $client = new Google_Client(['client_id' => $this->CLIENTID]);
+            $payload = $client->verifyIdToken($token);
+            if ($payload) {
+                $userid = $payload['sub'];
+                return array("user_id" => $userid);
+            } else {
+                return false;
+            }
         }
     }
 
