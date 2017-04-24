@@ -4,7 +4,7 @@ RewriteEngine On
 
 RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
 
-RewriteRule ^/(.*)/(.*)$ /index.php?c=$2&a=$3 [L]
-#RewriteRule ^(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2&id=$3 [L]
+RewriteRule ^(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2 [L]
+RewriteRule ^(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2&id=$3 [L]
 
 
