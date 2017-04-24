@@ -2,9 +2,9 @@
 Options +FollowSymLinks
 RewriteEngine On
 
-RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
+RewriteCond %{HTTP_HOST} ^[^.]+$
 
-RewriteRule ^(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2 [L]
+RewriteRule ^(.*)/(.*)$ /index.php?c=$1&a=$2 [L]
 RewriteRule ^(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2&id=$3 [L]
 
 
