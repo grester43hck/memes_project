@@ -2,7 +2,7 @@
 Options +FollowSymLinks
 RewriteEngine On
 
-RewriteRule ^(.*)/(.*)$ /index.php?c=$1&a=$2 [L]
-RewriteRule ^(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2&id=$3 [L]
+RewriteRule /(.*)/(.*)$ /index.php?c=$1&a=$2 [L]
+RewriteRule /(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2&id=$3 [L]
 
 
