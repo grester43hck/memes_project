@@ -12,7 +12,8 @@ require_once "model/Model.php";
 require_once "model/testModel.php";
 
 //CONTROLLERS
-require_once "Controllers/Controller.php";
+require_once "Controllers/BaseController.php";
+require_once "Controllers/ErrorController.php";
 require_once "Controllers/UserController.php";
 
 //AUTH

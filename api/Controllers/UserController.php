@@ -12,7 +12,7 @@ class UserController extends BaseController
 {
     public static function MainAction()
     {
-        // TODO: Implement MainAction() method.
+        echo "MAIN ACTION OF USER CONTROLLER";
     }
 
 }
