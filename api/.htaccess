@@ -3,9 +3,8 @@ Options +FollowSymLinks
 RewriteEngine On
 
 RewriteCond %{HTTP_HOST} ^[^.]+\.[^.]+$
-RewriteRule ^(.*)$ http://www.%{HTTP_HOST}/$1 [L,R=301]
 
-RewriteRule ^api/(.*)/(.*)$ /index.php?c=$1&a=$2 [L]
-RewriteRule ^api/(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2&id=$3 [L]
+RewriteRule ^(.*)/(.*)$ /index.php?c=$1&a=$2 [L]
+RewriteRule ^(.*)/(.*)/(.*)$ /index.php?c=$1&a=$2&id=$3 [L]
 
 
