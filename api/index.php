@@ -12,7 +12,8 @@ include_once "header.php";
 $token="";
 $type="google";
 $auth = new Authenticate();
-$auth->auth($tokem, $type);
+$user_id = $auth->auth($token, $type);
+if($user_id) define("USER", $user_id);
 
 $controller = (isset($_GET["c"])&&$_GET["c"]!="")?ucfirst($_GET["c"])."Controller":"ErrorController";
 $action = (isset($_GET["a"])&&$_GET["a"]!="")?ucfirst($_GET["a"])."Action":"MainAction";
