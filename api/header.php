@@ -5,7 +5,7 @@
  * Date: 23/04/17
  * Time: 19:46
  */
-
+header("Access-Control-Allow-Origin: *");
 //CONFIG
 include_once "config/config.php";
 
