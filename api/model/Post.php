@@ -24,4 +24,16 @@ class Post extends Model
         return "posts";
     }
 
+    public function getFixedFields()
+    {
+        return array(
+            "user_id",
+            "date",
+            "file",
+            "upvotes",
+            "downvotes"
+        );
+    }
+
+
 }
