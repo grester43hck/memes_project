@@ -18,8 +18,15 @@ class PostController extends BaseController
     }
 
     public static function createAction(){
+        var_dump($_REQUEST);
+        //$auth = new Authenticate();
+        //$auth->auth($_R)
 
         $post = (new Post)->parse($_POST);
+        $post->date = date("d/m/Y H:i:s");
+        $post->upvotes =0;
+        $post->downvotes =0;
+        $post->user_id = USER;
 
         $con = new MongoConector();
         $con->create($post);
