@@ -16,7 +16,9 @@ class UserController extends BaseController
     }
 
     public static function LoginAction(){
-        var_dump(file_contents("php://input"));
+        header("Access-Control-Allow-Origin: *");
+
+        var_dump(file_get_contents("php://input"));
         if(!isset($_POST["token"])||!isset($_POST["type"])) {
             parent::printJSON(array("error"=>"missing params"));
         }
