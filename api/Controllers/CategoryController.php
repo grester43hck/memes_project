@@ -8,7 +8,7 @@
  */
 include_once "BaseController.php";
 
-class PostController extends BaseController
+class CategoryController extends BaseController
 {
     public static function MainAction()
     {
