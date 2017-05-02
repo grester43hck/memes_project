@@ -8,7 +8,7 @@
  */
 include_once "Model.php";
 
-class testModel extends Model
+class Post extends Model
 {
     public $text;
     public $user_id;
