@@ -21,12 +21,21 @@ class UserController extends BaseController
             parent::printJSON(array("error"=>"missing params"));
         }
 
-
         $token = $_POST["token"];
         $type = $_POST["type"];
 
         $auth = new Authenticate();
         $res = $auth->auth($token, $type);
+
+        $user = new User();
+        $user->parse($_POST);
+        $user->date_last = date("d/m/Y H:i:s");
+
+        var_dump($user);
+
+        $con = new MongoConector();
+        $con->update(array("oauth_id"=>$user->oauth_id), $user, true);
+
         parent::printJSON(array("success"=>($res)?true:false));
     }
 
