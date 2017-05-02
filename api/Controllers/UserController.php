@@ -15,7 +15,7 @@ class UserController extends BaseController
         echo "MAIN ACTION OF USER CONTROLLER";
     }
 
-    public static function login(){
+    public static function LoginAction(){
         if(!isset($_POST["token"])||!isset($_POST["type"])) {
             parent::printJSON(array("error"=>"missing params"));
         }
