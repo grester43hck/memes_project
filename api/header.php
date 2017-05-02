@@ -6,6 +6,7 @@
  * Time: 19:46
  */
 header("Access-Control-Allow-Origin: *");
+ini_set("error_reporting", 0);
 //CONFIG
 include_once "config/config.php";
 
