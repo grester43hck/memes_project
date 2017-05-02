@@ -18,11 +18,11 @@ abstract class Model
     {
 
         $object = (array)$object;
-        foreach($object as $field=>$val){
-            if($field=="_id"){
-                $this->id = array_values((array)$val)[0];
+        foreach(get_class_vars() as $field){
+            if($field=="id"){
+                $this->id = $object["_id"]->{'$id'};
             }else {
-                $this->$field = $val;
+                $this->$field = $object[$field];
             }
         }
         return $this;

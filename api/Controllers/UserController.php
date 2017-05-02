@@ -31,8 +31,6 @@ class UserController extends BaseController
         $user->parse($_POST);
         $user->date_last = date("d/m/Y H:i:s");
 
-        var_dump($user);
-
         $con = new MongoConector();
         $con->update(array("oauth_id"=>$user->oauth_id), $user, true);
 
