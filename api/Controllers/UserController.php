@@ -16,8 +16,14 @@ class UserController extends BaseController
     }
 
     public static function login(){
+        if(!isset($_POST["token"])||!isset($_POST["type"])) {
+            parent::printJSON(array("error"=>"missing params"));
+        }
+
+
         $token = $_POST["token"];
         $type = $_POST["type"];
+
         $auth = new Authenticate();
         $res = $auth->auth($token, $type);
         parent::printJSON(array("success"=>($res)?true:false));
