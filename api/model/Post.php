@@ -14,6 +14,7 @@ class Post extends Model
     public $user_id;
     public $date;
     public $file;
+    public $category_id;
     public $upvotes;
     public $downvotes;
 

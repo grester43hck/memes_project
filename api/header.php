@@ -14,12 +14,14 @@ require_once "model/MongoConector.php";
 require_once "model/Model.php";
 require_once "model/Post.php";
 require_once "model/User.php";
+require_once "model/Category.php";
 
 //CONTROLLERS
 require_once "Controllers/BaseController.php";
 require_once "Controllers/ErrorController.php";
 require_once "Controllers/UserController.php";
 require_once "Controllers/PostController.php";
+require_once "Controllers/CategoryController.php";
 
 //GOOGLE
 require_once '../google/vendor/autoload.php';
