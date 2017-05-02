@@ -13,6 +13,7 @@ include_once "config/config.php";
 require_once "model/MongoConector.php";
 require_once "model/Model.php";
 require_once "model/Post.php";
+require_once "model/User.php";
 
 //CONTROLLERS
 require_once "Controllers/BaseController.php";
