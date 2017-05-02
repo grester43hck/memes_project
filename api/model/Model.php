@@ -19,8 +19,7 @@ abstract class Model
         $object = (array)$object;
         foreach(get_class_vars(get_class($this)) as $field=>$val){
             if($field=="id"){
-                var_dump($object["_id"]->oid);
-                $this->id = $object["_id"]->{'oid'};
+                $this->id = $object["_id"]->__toString();
             }else {
                 $this->$field = $object[$field];
             }
