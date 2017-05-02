@@ -9,4 +9,9 @@
 abstract class BaseController
 {
     public abstract static function MainAction();
+
+    public static function printJSON($data){
+        header('Content-Type: application/json');
+        echo json_encode($data);
+    }
 }

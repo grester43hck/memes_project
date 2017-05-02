@@ -14,7 +14,7 @@ class PostController extends BaseController
     {
         $con = new MongoConector();
         $res = $con->find((new Post));
-        echo json_encode($res);
+        parent::printJSON($res);
     }
 
 }
