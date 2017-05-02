@@ -16,6 +16,7 @@ class Post extends Model
     public $file;
     public $category_id;
     public $upvotes;
+    public $nsfw;
     public $downvotes;
 
     public function getCollection()

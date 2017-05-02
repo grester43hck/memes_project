@@ -17,4 +17,14 @@ class PostController extends BaseController
         parent::printJSON($res);
     }
 
+    public static function createAction(){
+
+        $post = (new Post)->parse($_POST);
+
+        $con = new MongoConector();
+        $con->create($post);
+
+        parent::printJSON(array("success"=>true));
+    }
+
 }

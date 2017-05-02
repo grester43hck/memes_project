@@ -27,6 +27,13 @@ class MongoConector
         $this->conexion->executeBulkWrite('memes_project.'.$model->getCollection(), $bulk);
     }
 
+    public function create($model){
+        $bulk = new \MongoDB\Driver\BulkWrite;
+        $model->id = new MongoDB\BSON\ObjectId($model->id);
+        $bulk->insert($model);
+        $this->conexion->executeBulkWrite('memes_project.'.$model->getCollection(), $bulk);
+    }
+
     public function find($model, $query=array(), $options=array()){
 
         $query = new \MongoDB\Driver\Query($query, $options);
