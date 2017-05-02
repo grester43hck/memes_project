@@ -16,7 +16,7 @@ class UserController extends BaseController
     }
 
     public static function LoginAction(){
-        var_dump(file_contents("php://input"));die();
+        var_dump(file_contents("php://input"));
         if(!isset($_POST["token"])||!isset($_POST["type"])) {
             parent::printJSON(array("error"=>"missing params"));
         }
