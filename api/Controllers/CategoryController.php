@@ -14,7 +14,7 @@ class CategoryController extends BaseController
     {
     }
 
-    public static function GetCategoriesAction(){
+    public static function getAction(){
 
         $con = new MongoConector();
         parent::printJSON($con->find((new Category())));
