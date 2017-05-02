@@ -18,7 +18,7 @@ abstract class Model
     {
 
         $object = (array)$object;
-        foreach(get_class_vars(self::class) as $field){
+        foreach(get_object_vars($this) as $field){
             var_dump($field);
             if($field=="id"){
                 $this->id = $object["_id"]->{'$id'};
