@@ -34,7 +34,7 @@ class MongoConector
 
         $res = array();
         foreach($rows as $r) {
-            $res[] = $model->parse($r);
+            array_push($res, $model->parse($r));
         }
         return $res;
     }
