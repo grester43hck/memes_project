@@ -22,7 +22,7 @@ class MongoConector
 
     public function update($query, $model, $upsert=false){
         $bulk = new \MongoDB\Driver\BulkWrite;
-        $model->id = new MongoId($model->id);
+        $model->id = new MongoDB\BSON\ObjectId($model->id);
         $bulk->update($query, array('$set'=>$model));
         $this->conexion->executeBulkWrite('memes_project.'.$model->getCollection(), $bulk, array("upsert"=>$upsert));
     }
