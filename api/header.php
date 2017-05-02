@@ -12,12 +12,13 @@ include_once "config/config.php";
 //MODEL
 require_once "model/MongoConector.php";
 require_once "model/Model.php";
-require_once "model/testModel.php";
+require_once "model/Post.php";
 
 //CONTROLLERS
 require_once "Controllers/BaseController.php";
 require_once "Controllers/ErrorController.php";
 require_once "Controllers/UserController.php";
+require_once "Controllers/PostController.php";
 
 //GOOGLE
 require_once '../google/vendor/autoload.php';
