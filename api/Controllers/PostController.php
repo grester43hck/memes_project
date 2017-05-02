@@ -18,6 +18,7 @@ class PostController extends BaseController
     }
 
     public static function createAction(){
+
         var_dump($_REQUEST);
         //$auth = new Authenticate();
         //$auth->auth($_R)

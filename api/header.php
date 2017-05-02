@@ -5,6 +5,7 @@
  * Date: 23/04/17
  * Time: 19:46
  */
+header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
 header("Access-Control-Allow-Origin: *");
 ini_set("error_reporting", 0);
 //CONFIG
